@@ -1,0 +1,78 @@
+/* Style Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    position: sticky; 
+    top: 0;
+    background-color: rgb(163, 186, 210);
+    border-bottom: 1px solid midnightblue;
+}
+
+header nav ul {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header nav li {
+    display: inline-block;  
+    margin: 10px; 
+}
+
+/* Link Styles */
+li a {
+    display: block;
+    padding: 10px 15px; /* Increased padding for better click area */
+    color: midnightblue;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for background, color, transform, and shadow */
+}
+li a[aria-current="page"], li a:hover {
+    background-color: white;
+    color: midnightblue;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for active link */
+}
+
+li a:hover {
+    transform: translateY(-4px); /* Slight lift on hover */
+}
+
+li a:active {
+    transform: translateY(0); /* Return to original position on click */
+    background-color: lightblue; /* Slightly different color on click */
+}
+/*Keyboard Focus Styles */
+li a:focus-visible {
+    background-color: white;
+    color: midnightblue;
+    outline: 2px solid black; /* Visible focus outline */
+}
+
+/* Skip Link Styles */
+.skip-link {
+  position: absolute;
+  font-size: 24px;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%); /* Hide the link off-screen */
+  overflow: hidden;
+  background: rgb(163, 186, 210);
+  color: midnightblue; 
+  padding: 24px; 
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+/* Reveal the skip link when it receives keyboard focus */
+.skip-link:focus-visible {
+  transform: translateY(0); /* Bring the link into view */
+  overflow: visible;
+  z-index: 1000; /* Ensures it appears on top */
+}

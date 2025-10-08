@@ -32,12 +32,12 @@ A small, fast portfolio site with an About section, a Projects list, and simple 
 ```
 /
 ├─ index.html
-├─ Resources/
+├─ assets/
 │  └─ Peyton.png
 └─ README.md
 ```
 
-> Case matters on the web host. If your folder is 'Resources', don’t reference it as 'resources'.
+> Case matters on the web host. If your folder is 'Assets', don’t reference it as 'assets'.
 
 ---
 

@@ -4,18 +4,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Peyton Breese — About</title>
+  <link href="./style.css" rel="stylesheet" />
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link" tabindex="0" href="#main">Skip to main content</a>
 
   <header class="site-header">
-    <h1>Peyton Breese</h1>
+    <h1 id="home">Peyton Breese</h1>
     <p class="tagline">Bicycle mechanic → full-stack builder</p>
     <nav aria-label="Primary">
       <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a tabindex="0" aria-current="page" href="#home">Home</a></li>
+        <li><a tabindex="0" href="#about">About</a></li>
+        <li><a tabindex="0" href="#projects">Projects</a></li>
+        <li><a tabindex="0" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
