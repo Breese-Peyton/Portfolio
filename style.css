@@ -3,7 +3,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "londrina-shadow-regular", "baumans-regular", sans-serif;
+    line-height: 1.5;
+    font-size: 24px;
 }
+
+/* Font Imports */
+.londrina-shadow-regular {
+  font-family: "Londrina Shadow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.baumans-regular {
+  font-family: "Baumans", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* Header Styles */
 header {
@@ -75,4 +92,68 @@ li a:focus-visible {
   transform: translateY(0); /* Bring the link into view */
   overflow: visible;
   z-index: 1000; /* Ensures it appears on top */
+}
+
+/* Main Content Styles */
+
+html {
+  scroll-padding-top: 123px; /* Adjust based on header height */
+  scroll-behavior: smooth; /* Optional: for smooth scrolling */
+}
+
+main {
+    padding: 0;
+    margin: 20px auto;
+    width: 100%;
+}
+
+main p, main h2 {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 66ch; /* Optimal line length for readability */
+}
+
+/* Headshot Section Styles */
+#headshot figure {
+    float: left;
+    width: 100%;
+}
+#headshot figure img {
+    padding: 0;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+}
+
+/* About Section Styles */
+#about p {
+  max-width: 700px;
+  line-height: 1.6;
+  margin: 0 auto 1.2em auto;
+  color: rgb(163, 186, 210);
+}
+
+#about strong {
+  color: midnightblue;
+  font-weight: 600;
+}
+
+
+/* Projects Section Styles */
+#projects ul {
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+
+}
+
+#projects ul li {
+    display: inline-block;
+    margin: 2%;
+    padding: 10% 5%;
+    background-color: rgb(163, 186, 210);
+    border-radius: 20px;
 }
