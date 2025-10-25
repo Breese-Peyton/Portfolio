@@ -8,81 +8,133 @@
   <link href="./style.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Londrina+Shadow&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <a class="skip-link" tabindex="0" href="#main">Skip to main content</a>
-
-  <header class="site-header">
-    <h1 id="home">Peyton Breese</h1>
-    <p class="tagline">Bicycle mechanic → full-stack builder</p>
-    <nav aria-label="Primary">
-      <ul>
-        <li><a tabindex="0" aria-current="page" href="#main">Home</a></li>
-        <li><a tabindex="0" href="#about">About</a></li>
-        <li><a tabindex="0" href="#projects">Projects</a></li>
-        <li><a tabindex="0" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Header -->
+  <header class="hero">
+    <figure class="headshot">
+      <img src="./assets/peyton-headshot-modified.png" alt="Headshot of Peyton Breese">
+    </figure>
+    <div class="container">
+      <hgroup>
+        <h1>Peyton Breese</h1>
+        <p>Bicycle mechanic &rarr; full stack builder</p>
+      </hgroup>
+      <button class="cta"><a href="#see-projects">View Projects</a></button>
+    </div>
   </header>
-
-  <main id="main">
-
-    <section id="headshot">
-      <figure>
-        <img src="./assets/Peyton.png" alt="Peyton Breese, headshot" />
-        <figcaption>Peyton Breese — builder of Handlebar POS</figcaption>
-      </figure>
-    </section>
-
-    <section id="about">
+  <main>
+    <!-- About Me-->
+    <section class="about">
       <h2>About Me</h2>
-      <p>
-        I'm <strong>Peyton Breese</strong>, a hands-on problem solver with a background in mechanics and a future in software.
-        I started my career fixing complex systems you can touch, like bicycles, where every detail matters and performance is visible in motion.
-        That same mindset now guides how I build software: efficient, reliable, and designed to work smoothly in the real world.
-      </p>
-      <p>
-        I'm currently expanding my skills across the full stack, focusing on
-        <strong>JavaScript, React, Node, and Postgres</strong>.
-        My current project, <strong>Handlebar POS</strong>, is a rental management platform I designed from the ground up
-        to make small-shop operations simpler and smarter.
-      </p>
-      <p>
-        What excites me most about software is its ability to scale craftsmanship —
-        to take the precision and pride of fixing one bike and apply it to solving problems for thousands of users.
-        I'm not looking for shortcuts; I'm building a foundation for long-term impact.
-      </p>
-      <p>
-        I thrive in teams that value autonomy, shared learning, and clear communication.
-        I bring <strong>humility, curiosity, and a steady hand</strong>,
-        whether I'm debugging a production issue or refining an idea until it feels right.
-      </p>
-      <p><strong>In short:</strong> I fix what's broken, improve what works, and build with care.
-        My goal is to grow into a full-stack role where I can help craft tools that make life easier and smarter for real people.
-      </p>
+      <div class="bio">
+        <p>I'm <strong>Peyton Breese</strong>, a hands-on problem solver with a background in mechanics and a future in software.
+           I started my career fixing complex systems you can touch, like bicycles, where every detail matters and performance is visible in motion.
+           That same mindset now guides how I build software: efficient, reliable, and designed to work smoothly in the real world.
+        </p>
+        <p>
+           I'm currently expanding my skills across the full stack, focusing on
+           <strong>JavaScript, React, Node, and Postgres</strong>.
+           My current project, <strong>Handlebar POS</strong>, is a rental management platform I designed from the ground up
+           to make small-shop operations simpler and smarter.
+        </p>
+        <p>
+           What excites me most about software is its ability to scale craftsmanship —
+           to take the precision and pride of fixing one bike and apply it to solving problems for thousands of users.
+           I'm not looking for shortcuts; I'm building a foundation for long-term impact.
+        </p>
+        <p>
+           I thrive in teams that value autonomy, shared learning, and clear communication.
+           I bring <strong>humility, curiosity, and a steady hand</strong>,
+           whether I'm debugging a production issue or refining an idea until it feels right.
+        </p>
+        <p><strong>In short:</strong> I fix what's broken, improve what works, and build with care.
+           My goal is to grow into a full-stack role where I can help craft tools that make life easier and smarter for real people.
+        </p>
+      </div>
     </section>
-  
-    <section id="projects">
+    <!-- Skills -->
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skills-icons">
+        <img class="icon-0" src="./assets/tech-stack/CSS3.svg" alt="CSS3 Logo" title="CSS3">
+        <img class="icon-1" src="./assets/tech-stack/Express.svg" alt="Express.js Logo" title="Express.js">
+        <img class="icon-2" src="./assets/tech-stack/Figma.svg" alt="Figma Logo" title="Figma">
+        <img class="icon-3" src="./assets/tech-stack/Git.svg" alt="Git Logo" title="Git">
+        <img class="icon-4" src="./assets/tech-stack/Github.svg" alt="GitHub Logo" title="GitHub">
+        <img class="icon-5" src="./assets/tech-stack/HTML5.svg" alt="HTML5 Logo" title="HTML5">
+        <img class="icon-6" src="./assets/tech-stack/JavaScript.svg" alt="JavaScript Logo" title="JavaScript">
+        <img class="icon-7" src="./assets/tech-stack/Node.js.svg" alt="Node.js Logo" title="Node.js">
+        <img class="icon-8" src="./assets/tech-stack/OpenAPI.svg" alt="OpenAPI Logo" title="OpenAPI">
+        <img class="icon-9" src="./assets/tech-stack/PostgresSQL.svg" alt="PostgreSQL Logo" title="PostgreSQL">
+        <img class="icon-10" src="./assets/tech-stack/React.svg" alt="React Logo" title="React">
+        <img class="icon-11" src="./assets/tech-stack/Redux.svg" alt="Redux Logo" title="Redux">
+        <img class="icon-12" src="./assets/tech-stack/Swagger.svg" alt="Swagger Logo" title="Swagger">
+        <img class="icon-13" src="./assets/tech-stack/VS-Code.svg" alt="Visual Studio Code Logo" title="Visual Studio Code">
+      </div>
+    </section>
+    <!-- Projects -->
+    <section id="see-projects" class="projects">
       <h2>Projects</h2>
-      <ul>
-        <li><a href="#" title="Live link coming soon">Handlebar POS</a> — point of sale for rental businesses</li>
-        <li><a href="#" title="Live link coming soon">Beached</a> — elevated beach experiences via tech</li>
-        <li><a href="#" title="Live link coming soon">Nannify</a> — connect families with trusted nannies</li>
-      </ul>
+      <div class="container">
+        <div class="project-1">
+          <hgroup class="desc desc-1">
+            <h3>Handlebar POS</h3>
+            <p class="tagline">A rental management platform designed to simplify operations for small rental shops.</p>
+            <p class="meta"><strong>Role:</strong> Full Stack Developer <strong>Technologies:</strong>TBD</p>
+          </hgroup>
+          <div class="card card-1">
+            <hgroup> 
+              <h3>Handlebar POS</h3>
+              <p>Increased profitability 30% through streamlined operations and improved inventory management.</p>
+              <button class="view-live"><a href="#">View Live</a></button>
+              <button class="view-code"><a href="#">View Code</a></button>
+            </hgroup>
+          </div>
+        </div>
+        <div class="project-2">
+         <hgroup class="desc desc-2">
+            <h3>Beached</h3>
+            <p class="tagline">Beach concierge service platform for booking and managing beach activities.</p>
+            <p class="meta"><strong>Role:</strong> Full Stack Developer <strong>Technologies:</strong>TBD</p>
+          </hgroup>
+          <div class="card card-2">
+            <hgroup> 
+              <h3>Beached</h3>
+              <p>Increased bookings by 25% through enhanced user experience and streamlined operations.</p>
+              <button class="view-live"><a href="#">View Live</a></button>
+              <button class="view-code"><a href="#">View Code</a></button>
+            </hgroup>
+          </div>
+        </div>
+        <div class="project-3">
+          <hgroup class="desc desc-3">
+            <h3>Nannify</h3>
+            <p class="tagline">A platform for connecting families with local caregivers for childcare and tutoring.</p>
+            <p class="meta"><strong>Role:</strong> Full Stack Developer <strong>Technologies:</strong>TBD</p>
+          </hgroup>
+          <div class="card card-3">
+            <hgroup> 
+              <h3>Nannify</h3>
+              <p>Improved trust and safety for families through robust caregiver vetting and background checks.</p>
+              <button class="view-live"><a href="#">View Live</a></button>
+              <button class="view-code"><a href="#">View Code</a></button>
+            </hgroup>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <address>
-        <p>Email: <a href="mailto:peyton@homesavvy.app">peyton@homesavvy.app</a></p>
-        <p>Phone: <a href="tel:+15136466718">(513) 646-6718</a></p>
-      </address>
+    <!-- Contact Me -->
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>If you'd like to get in touch, feel free to reach out via email at <a href="mailto:peyton@homesavvy.app">peyton@homesavvy.app</a></p>
+      <p>Contact Form Coming Soon</p>
     </section>
+    <footer>
+      <p>&copy; 2025 Peyton Breese</p>
+      <p>Social Links Coming Soon</p>
+    </footer>
   </main>
-
-  <footer class="site-footer">
-    <small>&copy; <time datetime="2025">2025</time> Peyton Breese</small>
-  </footer>
 </body>
 </html>

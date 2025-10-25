@@ -1,159 +1,352 @@
 /* Style Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "londrina-shadow-regular", "baumans-regular", sans-serif;
-    line-height: 1.5;
-    font-size: 24px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
-/* Font Imports */
-.londrina-shadow-regular {
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+/* Header Styling */
 
-.baumans-regular {
-  font-family: "Baumans", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-/* Header Styles */
 header {
-    position: sticky; 
-    top: 0;
-    background-color: rgb(163, 186, 210);
-    border-bottom: 1px solid midnightblue;
+    display: flex;
+    flex-direction: row;
+    background-color: #F5F3EE;
+    width: 100%;
+    border-bottom: 1px solid HSLA(213, 22%, 84%, .5);
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
 }
 
-header nav ul {
-    text-align: center;
-    padding: 0;
+.headshot img {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    margin: 20px;
+    background-color: #5E7D5E;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .5);
     margin: 0;
-    list-style: none;
+    margin-right: 2rem;
 }
 
-header nav li {
-    display: inline-block;  
-    margin: 10px; 
+header div.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
 }
 
-/* Link Styles */
-li a {
-    display: block;
-    padding: 10px 15px; /* Increased padding for better click area */
-    color: midnightblue;
-    font-size: 24px;
+header hgroup h1 {
+    font-size: 4rem;
+    color: #111827;
+    font-family: 'Sora', sans-serif;
+    font-weight: 700; 
+}
+
+header hgroup p {
+    font-size: 1.5rem;
+    color: rgba(17,24,39,0.85);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+button.cta {
+    background-color: #5E7D5E;
+    color: #F5F3EE;
+    height: 3.5rem;
+    width: 12rem;
+    border: 1px solid HSLA(213, 22%, 84%, .5);
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin-top: .75rem;
+}
+
+button.cta a {
     text-decoration: none;
-    border-radius: 8px; /* Rounded corners */
-    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition for background, color, transform, and shadow */
-}
-li a[aria-current="page"], li a:hover {
-    background-color: white;
-    color: midnightblue;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for active link */
+    color: #F5F3EE;
 }
 
-li a:hover {
-    transform: translateY(-4px); /* Slight lift on hover */
+button.cta:hover {
+    background-color: #526D52;
 }
 
-li a:active {
-    transform: translateY(0); /* Return to original position on click */
-    background-color: lightblue; /* Slightly different color on click */
-}
-/*Keyboard Focus Styles */
-li a:focus-visible {
-    background-color: white;
-    color: midnightblue;
-    outline: 2px solid black; /* Visible focus outline */
-}
+/* About Section Styling */
 
-/* Skip Link Styles */
-.skip-link {
-  position: absolute;
-  font-size: 24px;
-  left: 0;
-  top: 0;
-  transform: translateY(-100%); /* Hide the link off-screen */
-  overflow: hidden;
-  background: rgb(163, 186, 210);
-  color: midnightblue; 
-  padding: 24px; 
-  transition: transform 0.3s; /* Smooth transition */
-}
-
-/* Reveal the skip link when it receives keyboard focus */
-.skip-link:focus-visible {
-  transform: translateY(0); /* Bring the link into view */
-  overflow: visible;
-  z-index: 1000; /* Ensures it appears on top */
-}
-
-/* Main Content Styles */
-
-html {
-  scroll-padding-top: 123px; /* Adjust based on header height */
-  scroll-behavior: smooth; /* Optional: for smooth scrolling */
-}
-
-main {
-    padding: 0;
-    margin: 20px auto;
+section.about {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F3EE;
     width: 100%;
+    justify-content: flex-start;
+    border-bottom: 1px solid HSLA(213, 22%, 84%, .5);
+    padding: 2rem 6rem;
 }
 
-main p, main h2 {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 66ch; /* Optimal line length for readability */
-}
-
-/* Headshot Section Styles */
-#headshot figure {
-    float: left;
+.about h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #111827;
     width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
-#headshot figure img {
-    padding: 0;
-    margin: 0 auto;
-    border-radius: 20px;
-    overflow: hidden;
-    width: 300px;
+
+.about p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: rgba(17,24,39,0.85);
+    line-height: 1.6;
+}
+
+.about strong {
+    font-weight: 600;
+    color: #5E7D5E;
+}
+/* Skills Section Styling */
+section.skills {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F3EE;
+    width: 100%;
+    align-items: center;
+    padding: 3rem;
+    border-bottom: 1px solid HSLA(213, 22%, 84%, .5);
+}
+
+section.skills h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+div.skills-icons {
+    display: grid;
+    grid-template-areas: "icon-1 icon-2 icon-3 icon-4 icon-5 icon-6 icon-7"
+                         "icon-8 icon-9 icon-10 icon-11 icon-12 icon-13 icon-14";
+    width: 100%;
+    justify-content: space-around;
+}
+
+.skills-icons img {
+    width: 4rem;
+    height: 4rem;
+    margin: 1rem;
+    color: #111827;
+}
+
+.skills-icons img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+
+    /*
+    Want to come back to this later to learn how to change icon colors on hover,
+    I still need to figure out the stroke and don't want to mess with it for the
+    timeline on this project.
+
+    filter: brightness(0%) saturate(100%) invert(45%) sepia(7%) saturate(1427%) hue-rotate(71deg) brightness(98%) contrast(89%);
+    stroke: #111827; 
+    */
+}
+
+/* Projects Section Styling */
+
+section.projects {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F3EE;
+    width: 100%;
+    padding: 3rem;
+    border-bottom: 1px solid HSLA(213, 22%, 84%, .5);
+}
+
+.projects h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    width: 100%;
     text-align: center;
 }
 
-/* About Section Styles */
-#about p {
-  max-width: 700px;
-  line-height: 1.6;
-  margin: 0 auto 1.2em auto;
-  color: rgb(163, 186, 210);
+.projects h3 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #111827;
+    margin-bottom: 1rem;
 }
 
-#about strong {
-  color: midnightblue;
-  font-weight: 600;
+.projects p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: rgba(17,24,39,0.85);
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
+.projects .container {
+    display: grid;
+    grid-template-areas: "project-1"
+                         "project-2"
+                         "project-3";
+}
 
-/* Projects Section Styles */
-#projects ul {
-    padding: 0;
-    margin: 0 auto;
-    list-style: none;
+.project-1 {
+    grid-area: project-1;
+    display: grid;
+    grid-template-areas: "desc-1 card-1";
+    width: 100%;
+    margin: 2rem auto;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project-2 {
+    grid-area: project-2;
+    display: grid;
+    grid-template-areas: "card-2 desc-2";
+    width: 100%;
+    margin: 2rem auto;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project-3 {
+    grid-area: project-3;
+    display: grid;
+    grid-template-areas: "desc-3 card-3";
+    width: 100%;
+    margin: 2rem auto;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card-1 {
+    grid-area: card-1;
+}
+
+.card-2 {
+    grid-area: card-2;
+}
+
+.card-3 {
+    grid-area: card-3;
+}
+
+.desc-1 {
+    grid-area: desc-1;
+}
+
+.desc-2 {
+    grid-area: desc-2;
+}
+
+.desc-3 {
+    grid-area: desc-3;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: #3b5f4e;
+    border: 1px solid HSLA(213, 22%, 84%, .5);
+    border-radius: 8px;
+    width: 100%;
+    justify-content: center;
     text-align: center;
-
+    padding: 1rem;
 }
 
-#projects ul li {
-    display: inline-block;
-    margin: 2%;
-    padding: 10% 5%;
-    background-color: rgb(163, 186, 210);
-    border-radius: 20px;
+.card hgroup h3, .card hgroup p {
+    color: #F5F3EE;
+}
+.projects hgroup.desc {
+    border: 1px solid HSLA(213, 22%, 84%, .5);
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    background-color: #a4b4a7;
+    padding: 1rem;
+}
+
+.projects button {
+    background-color: #F5F3EE;
+    height: 3rem;
+    width: 10rem;
+    border: 1px solid HSLA(213, 22%, 84%, .5);
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 1rem 2rem;
+    justify-content: center;
+}
+
+.projects button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    top: -.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+}
+
+.projects button a {
+    text-decoration: none;
+    color: #D46A3D;
+}
+
+/* Contact Section Styling */
+
+section.contact {
+    background-color: #F5F3EE;
+    width: 100%;
+    align-items: center;
+    padding: 3rem;
+    border-bottom: 1px solid HSLA(213, 22%, 84%, .5);
+}
+
+section.contact h2 {
+    font-family: 'Sora', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+section.contact p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: rgba(17,24,39,0.85);
+    line-height: 1.6;
+    text-align: center;
+}
+
+section.contact a {
+    color: #5E7D5E;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Footer Section Styling */
+
+footer {
+    background-color: #F5F3EE;
+    width: 100%;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
 }
