@@ -51,6 +51,12 @@ header hgroup p {
     font-weight: 400;
 }
 
+.button-group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+
 button.cta {
     background-color: #5E7D5E;
     color: #F5F3EE;
@@ -73,6 +79,31 @@ button.cta a {
 button.cta:hover {
     background-color: #526D52;
 }
+
+button.dark-mode-toggle {
+    background-color: #D46A3D;
+    color: #F5F3EE;
+    height: 3.5rem;
+    width: 12rem;
+    border: 1px solid HSLA(213, 22%, 84%, .5);
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin-top: .75rem;
+    margin-left: 1rem;
+}
+
+button.dark-mode-toggle:hover {
+    background-color: #B2502E;
+}
+
+body.dark-mode {
+    background-color: #1F2937;
+    color: #D1D5DB;
+}
+
 
 /* About Section Styling */
 
@@ -341,6 +372,45 @@ section.contact a {
     cursor: pointer;
 }
 
+section.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin: 2rem auto;
+    width: 60%;
+    border: 1px solid HSLA(213, 22%, 84%, .9);
+    border-radius: 8px;
+}
+
+section.contact form input, section.contact form textarea {
+    width: 80%;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border: 1px solid HSLA(213, 22%, 84%, .5);
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+section.contact form label[for="name"] {
+    margin-top: 2rem;
+}
+
+section.contact form button {
+    background-color: #5E7D5E;
+    color: #F5F3EE;
+    height: 3.5rem;
+    width: 10rem;
+    border: 1px solid HSLA(213, 22%, 84%, .5);
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    cursor: pointer;
+    margin: 1rem 0 2rem 0;
+}
+
 /* Footer Section Styling */
 
 footer {
@@ -349,4 +419,84 @@ footer {
     align-items: center;
     padding: 1.5rem;
     text-align: center;
+}
+
+/* Dark Mode Overrides     */
+
+body {
+  background-color: #F5F3EE;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #111827;
+  color: #E5E7EB;
+}
+
+/* Layout sections */
+body.dark-mode header,
+body.dark-mode section.about,
+body.dark-mode section.skills,
+body.dark-mode section.projects,
+body.dark-mode section.contact,
+body.dark-mode footer {
+  background-color: #111827;
+  border-color: hsla(213, 22%, 20%, 0.7);
+}
+
+/* Headings and text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label {
+  color: #E5E7EB;
+}
+
+/* Project cards */
+body.dark-mode .card {
+  background-color: #374151;
+  border-color: hsla(213, 22%, 20%, 0.9);
+}
+
+body.dark-mode .projects hgroup.desc {
+  background-color: #4B5563;
+  border-color: hsla(213, 22%, 20%, 0.9);
+}
+
+/* Contact form */
+body.dark-mode section.contact form {
+  background-color: #111827;
+  border-color: hsla(213, 22%, 20%, 0.9);
+}
+
+body.dark-mode section.contact form input,
+body.dark-mode section.contact form textarea {
+  background-color: #111827;
+  color: #E5E7EB;
+  border-color: hsla(213, 22%, 40%, 0.8);
+}
+
+/* Buttons */
+body.dark-mode button.cta {
+  background-color: #5E7D5E;
+  color: #F5F3EE;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #B2502E;
+  color: #F5F3EE;
+}
+
+/* Project buttons */
+body.dark-mode .projects button {
+  background-color: #111827;
+  color: #F5F3EE;
+  border-color: hsla(213, 22%, 40%, 0.8);
+}
+
+body.dark-mode .projects button a {
+  color: #F97316; /* accent stays visible on dark */
 }

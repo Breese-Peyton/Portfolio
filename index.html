@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script> 
 </head>
 <body>
   <!-- Header -->
@@ -21,7 +22,10 @@
         <h1>Peyton Breese</h1>
         <p>Bicycle mechanic &rarr; full stack builder</p>
       </hgroup>
-      <button class="cta"><a href="#see-projects">View Projects</a></button>
+      <div class="button-group">
+        <button class="cta"><a href="#see-projects">View Projects</a></button>
+        <button class="dark-mode-toggle" id="dark-mode-toggle">Dark Mode</button>
+      </div>
     </div>
   </header>
   <main>
@@ -128,8 +132,19 @@
     <!-- Contact Me -->
     <section class="contact">
       <h2>Contact Me</h2>
-      <p>If you'd like to get in touch, feel free to reach out via email at <a href="mailto:peyton@homesavvy.app">peyton@homesavvy.app</a></p>
-      <p>Contact Form Coming Soon</p>
+      <p>If you'd like to get in touch, feel free to reach out via email at <a href="mailto:peyton@homesavvy.app">peyton@homesavvy.app</a> or fill out the form below.</p>
+      <form id="contact-form" action="https://formsubmit.co/peyton@homesavvy.app" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="10" required></textarea>
+        <br>
+        <button type="submit">Send Message</button>
+      </form>
     </section>
     <footer>
       <p>&copy; 2025 Peyton Breese</p>
